@@ -87,7 +87,7 @@ public class movieAdapter extends RecyclerView.Adapter<movieAdapter.ViewHolder> 
 
             //else if screen is in landscape, get backdropPath
 
-            Glide.with(context).load(imageURL).into(ivPoster);
+            Glide.with(context).load(imageURL).placeholder(R.drawable.ic_launcher_foreground).into(ivPoster);
         }
     }
 }
