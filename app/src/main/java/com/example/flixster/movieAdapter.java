@@ -2,6 +2,7 @@ package com.example.flixster;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,6 +51,8 @@ public class movieAdapter extends RecyclerView.Adapter<movieAdapter.ViewHolder> 
         Movie movie = movieList.get(position);
 
         holder.bind(movie);
+//        holder.title.setTextColor(Color.parseColor("#FFFFFF"));
+//        holder.overview.setTextColor(Color.parseColor("#FFFFFF"));
     }
 
 //Get the size of the model data
