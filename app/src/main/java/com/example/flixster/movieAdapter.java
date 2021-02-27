@@ -96,8 +96,7 @@ public class movieAdapter extends RecyclerView.Adapter<movieAdapter.ViewHolder> 
             else{
                 imageURL = movie.getBackdropPath();
             }
-            int radius = 1; // corner radius, higher value = more rounded
-            int margin = 1; // crop margin, set to 0 for corners with no crop
+
 
 
             //else if screen is in landscape, get backdropPath

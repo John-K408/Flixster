@@ -1,5 +1,6 @@
 package com.example.flixster;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -38,8 +39,13 @@ public class MainActivity extends AppCompatActivity {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
         RecyclerView rvMovies = binding.rvMovies;
         movies = new ArrayList<>();
-        Toolbar toolbar = binding.toolbar;
-        setSupportActionBar(toolbar);
+
+        if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+            Toolbar toolbar = binding.toolbar;
+            setSupportActionBar(toolbar);
+        }
+
+
 
         //Create adapter
         final movieAdapter movieAdapter = new movieAdapter(movies,this);
